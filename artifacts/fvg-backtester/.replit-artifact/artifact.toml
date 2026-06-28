@@ -1,0 +1,23 @@
+kind = "web"
+  previewPath = "/"
+  title = "FVG Backtester"
+  version = "1.0.0"
+  id = "artifacts/fvg-backtester"
+  router = "path"
+
+  [[integratedSkills]]
+  name = "react-vite"
+  version = "1.0.0"
+
+  [[services]]
+  name = "web"
+  paths = [ "/" ]
+  localPort = 5000
+
+  [services.development]
+  run = "streamlit run /home/runner/workspace/artifacts/fvg-backtester/app.py --server.port 5000 --server.address 0.0.0.0 --server.headless true"
+
+  [services.env]
+  PORT = "5000"
+  BASE_PATH = "/"
+  
